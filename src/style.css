@@ -1,0 +1,103 @@
+:root {
+  --text-color-1: #f9f9f9;
+  --clr-bg-1: #1c1f21;
+  --clr-bg-2: #131516;
+
+  --primary-font: 'open sans';
+  --secondary-font: 'baloo 2';
+  --title-font: 'Leckerli One';
+
+  --fw-1: 700;
+  --fw-2: 600;
+  --fw-3: 400;
+  --fw-4: 300;
+
+  --fs-1: 4rem;
+  --fs-2: 2.8rem;
+  --fs-3: 1.8rem;
+  --fs-4: 1.6rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.2rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--secondary-font);
+  font-size: 1.6rem;
+  background-color: var(--clr-bg-1);
+  min-height: 100dvh;
+  width: 100%;
+  padding: 8rem;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  width: 1260px;
+  margin-inline: auto;
+  background-color: var(--clr-bg-2);
+  border-radius: 20px;
+
+  & .preview {
+    height: 72.8rem;
+    padding: 2rem;
+
+    & .image {
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      padding-top: 3.2rem;
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      background-color: var(--clr-bg-1);
+      background-image: url('./assets/background-birthday.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      & img {
+        width: 45px;
+      }
+
+      & h2 {
+        font-family: var(--title-font);
+        font-size: var(--fs-1);
+        font-weight: var(--fw-3);
+        text-transform: capitalize;
+
+        color: var(--text-color-1);
+      }
+
+      & p {
+        font-weight: var(--fw-4);
+        font-family: (var(--primary-font));
+        font-size: var(--fs-4);
+
+        color: var(--text-color-1);
+      }
+    }
+  }
+
+
+}

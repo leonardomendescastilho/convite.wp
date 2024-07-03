@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./src/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+
+    <title>Convite</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- preview section -->
+      <section class="preview">
+        <div class="image">
+          <img
+            src="./src/assets/logo.svg"
+            alt="" />
+          <h2>Festivite</h2>
+          <p>Crie um convite digital para o seu evento</p>
+        </div>
+      </section>
+      <!-- form section -->
+      <section class="formulary">
+        <div class="form">
+          <h1>Crie seu convite</h1>
+          <form>
+            <!-- sobre evento -->
+            <fieldset>
+              <legend>Sobre o evento</legend>
+              <!-- title -->
+              <p>
+                <div>
+                  <label for="title">Título</label>
+                  <input id="title" type="text">
+                </div>
+              </p>
+              <!-- datetime-local -->
+              <p>
+                <div>
+                  <label for="start">Inicio</label>
+                  <input id="start" type="text">
+                </div>
+                <div>
+                  <label for="end">Fim</label>
+                  <input id="end" type="text">
+                </div>
+              </p>
+              <!-- type and local -->
+              <p>
+                <div>
+                  <label for="type">Tipo</label>
+                  <input id="type" type="text">
+                </div>
+                <div>
+                  <label for="local">Local</label>
+                  <input id="local" type="text">
+                </div>
+              </p>
+            </fieldset>
+            <!-- personalização -->
+            <fieldset>
+              <legend>Personalização</legend>
+            
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script
+      type="module"
+      src="./src/script.js"
+      defer></script>
+  </body>
+</html>
