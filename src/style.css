@@ -12,7 +12,7 @@
 
   --clr-brand-light: #59b2ff;
   --clr-brand-mid: #3487cf;
-  --clr-brand-dark: ##1d6fb6;
+  --clr-brand-dark: #1d6fb6;
 
   --text-body: #c8cdd0;
   --text-heading: #f9f9f9;
@@ -208,6 +208,8 @@ body {
           width: 52.8rem;
           margin-inline: auto;
 
+          margin-bottom: 8rem;
+
           display: flex;
           flex-flow: column;
 
@@ -240,8 +242,53 @@ body {
               }
             }
           }
+          & fieldset.terms {
+            & .title {
+              border-bottom: solid 1px var(--clr-input-brd);
+            }
+          }
+
+          & button {
+            align-self: flex-end;
+            cursor: pointer;
+            width: 178px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+
+            font-size: var(--fs-4);
+            font-weight: var(--fw-2);
+            padding: 10px 2rem 10px 2rem;
+
+            color: var(--text-heading);
+            background-color: var(--clr-brand-dark);
+
+            border: none;
+            border-radius: 8px;
+
+            transition: ease 0.2s;
+
+            &:hover{
+              filter: brightness(1.2);
+            }
+          }
         }
       }
     }
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
