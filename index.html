@@ -19,6 +19,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <title>Convite</title>
   </head>
@@ -41,7 +42,10 @@
           <form>
             <!-- sobre evento -->
             <fieldset class="about">
-              <legend>Sobre o evento</legend>
+              <div>
+                <i class="ph ph-calendar-blank"></i>
+                <legend>Sobre o evento</legend>
+              </div>
               <!-- title -->
 
               <div class="input-wrapper">
@@ -95,8 +99,46 @@
             </fieldset>
 
             <!-- personalização -->
-            <fieldset>
-              <legend>Personalização</legend>
+            <fieldset class="customization">
+              <div>
+                <i class="ph ph-paint-brush-broad"></i>
+                <legend>Personalização</legend>
+              </div>
+            </fieldset>
+
+            <!-- dados contato -->
+            <fieldset class="contact">
+              <div>
+                <i class="ph ph-address-book"></i>
+                <legend>Dados de Contato</legend>
+              </div>
+              <div class="input-wrapper">
+                <p>
+                  <label for="name">Nome</label>
+                  <input
+                    placeholder="Nome completo"
+                    id="name"
+                    type="text" />
+                </p>
+              </div>
+
+              <div class="input-wrapper">
+                <p>
+                  <label for="email">Email</label>
+                  <input
+                    placeholder="exemplo@gmail.com"
+                    id="email"
+                    type="email" />
+                </p>
+
+                <p>
+                  <label for="tel">Telefone</label>
+                  <input
+                    placeholder="(99) 9999-9999"
+                    id="tel"
+                    type="text" />
+                </p>
+              </div>
             </fieldset>
           </form>
         </div>
