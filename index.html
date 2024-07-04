@@ -40,42 +40,63 @@
           <h1>Crie seu convite</h1>
           <form>
             <!-- sobre evento -->
-            <fieldset>
+            <fieldset class="about">
               <legend>Sobre o evento</legend>
               <!-- title -->
-              <p>
-                <div>
+
+              <div class="input-wrapper">
+                <p>
                   <label for="title">Título</label>
-                  <input id="title" type="text">
-                </div>
-              </p>
+                  <input
+                    placeholder="Nome do evento"
+                    id="title"
+                    type="text" />
+                </p>
+              </div>
+
               <!-- datetime-local -->
-              <p>
-                <div>
+
+              <div class="input-wrapper">
+                <p>
                   <label for="start">Inicio</label>
-                  <input id="start" type="text">
-                </div>
-                <div>
+                  <input
+                    placeholder="01/01/0001 08:00"
+                    id="start"
+                    type="text" />
+                </p>
+
+                <p>
                   <label for="end">Fim</label>
-                  <input id="end" type="text">
-                </div>
-              </p>
+                  <input
+                    placeholder="01/01/0001 08:00"
+                    id="end"
+                    type="text" />
+                </p>
+              </div>
+
               <!-- type and local -->
-              <p>
-                <div>
+
+              <div class="input-wrapper">
+                <p>
                   <label for="type">Tipo</label>
-                  <input id="type" type="text">
-                </div>
-                <div>
+                  <input
+                    id="type"
+                    type="text" />
+                </p>
+
+                <p>
                   <label for="local">Local</label>
-                  <input id="local" type="text">
-                </div>
-              </p>
+                  <input
+                    placeholder="Link ou endereço"
+                    id="local"
+                    type="text" />
+                </p>
+              </div>
             </fieldset>
+
             <!-- personalização -->
             <fieldset>
               <legend>Personalização</legend>
-            
             </fieldset>
           </form>
         </div>

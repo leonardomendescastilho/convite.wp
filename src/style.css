@@ -1,11 +1,22 @@
 :root {
-  --text-color-1: #f9f9f9;
-  --clr-bg-1: #1c1f21;
-  --clr-bg-2: #131516;
+  --clr-bg-darkest: #131516;
+  --clr-bg-dark: #212427;
 
-  --primary-font: 'open sans';
-  --secondary-font: 'baloo 2';
-  --title-font: 'Leckerli One';
+  --clr-buttom: #2d3136;
+  --clr-hover: #383d42;
+  --clr-danger: #ff5959;
+
+  --clr-input-bg: #1c1f21;
+  --clr-input-brd: #363b40;
+  --clr-input-place: #869198;
+
+  --clr-brand-light: #59b2ff;
+  --clr-brand-mid: #3487cf;
+  --clr-brand-dark: ##1d6fb6;
+
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
+  --text-white: #fff;
 
   --fw-1: 700;
   --fw-2: 600;
@@ -18,6 +29,10 @@
   --fs-4: 1.6rem;
   --fs-5: 1.4rem;
   --fs-6: 1.2rem;
+
+  --ff-primary: 'open sans';
+  --ff-secondary: 'baloo 2';
+  --ff-title: 'Leckerli One';
 }
 html {
   font-size: 62.5%;
@@ -37,67 +52,168 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: var(--fw-2);
+  color: var(--clr-brand-light);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--clr-brand-mid);
+  }
+}
+
+input[type='text'],
+input[type='datatime-local'],
+input[type='email'] {
+  font-family: var(--ff-primary);
+
+  height: 4.8rem;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-3);
+  line-height: 1.5;
+  padding-block: 1.3rem;
+  padding-inline-start: 1.6rem;
+  margin-block: 1.2rem 1.6rem;
+
+  border: solid 1px var(--clr-input-brd);
+  border-radius: 8px;
+  background-color: var(--clr-input-bg);
+  color: var(--clr-input-place);
+
+  &:focus {
+    color: var(--text-white);
+    border: solid 1px var(--clr-brand-mid);
+    outline: none;
+  }
+}
+
+label {
+  font-size: var(--fs-5);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-3);
+
+  color: var(--text-body);
+}
+
+fieldset {
+  border: none;
+  & legend {
+    margin-bottom: 2.7rem;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-1);
+    line-height: 20px;
+    letter-spacing: 0.2px;
+
+    color: var(--text-heading);
+  }
 }
 
 body {
-  font-family: var(--secondary-font);
+  font-family: var(--ff-primary);
   font-size: 1.6rem;
-  background-color: var(--clr-bg-1);
+  background-color: var(--clr-bg-dark);
   min-height: 100dvh;
   width: 100%;
   padding: 8rem;
-}
 
-#app {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  width: 1260px;
-  margin-inline: auto;
-  background-color: var(--clr-bg-2);
-  border-radius: 20px;
+  #app {
+    display: grid;
+    grid-template-columns: 400px 1fr;
 
-  & .preview {
-    height: 72.8rem;
-    padding: 2rem;
+    width: 1260px;
+    margin-inline: auto;
 
-    & .image {
-      height: 100%;
-      width: 100%;
-      border-radius: 12px;
-      padding-top: 3.2rem;
-
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--clr-bg-2);
+    & section {
+      background-color: var(--clr-bg-darkest);
       display: flex;
       flex-flow: column;
-      align-items: center;
+      gap: 8rem;
+      height: 100%;
+      width: 100%;
+    }
 
-      background-color: var(--clr-bg-1);
-      background-image: url('./assets/background-birthday.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
+    & .preview {
+      padding: 2rem;
+      & .image {
+        min-height: 72.8rem;
+        padding-inline: 2rem;
+        padding-top: 3.2rem;
+        align-items: center;
 
-      & img {
-        width: 45px;
+        border-radius: 12px;
+        background-image: url('./assets/background-birthday.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & img {
+          width: 45px;
+        }
+
+        & h2 {
+          font-family: var(--ff-title);
+          font-size: var(--fs-1);
+          font-weight: var(--fw-3);
+          text-transform: capitalize;
+
+          color: var(--text-heading);
+        }
+
+        & p {
+          font-weight: var(--fw-4);
+          font-size: var(--fs-4);
+
+          color: var(--text-body);
+        }
       }
+    }
 
-      & h2 {
-        font-family: var(--title-font);
-        font-size: var(--fs-1);
-        font-weight: var(--fw-3);
-        text-transform: capitalize;
+    & .formulary {
+      background-color: var(--clr-bg-darkest);
+      padding: 2rem 2rem 2rem 0;
 
-        color: var(--text-color-1);
-      }
+      & .form {
+        width: 100%;
+        margin-inline: auto;
+        background-color: var(--clr-bg-dark);
+        border-radius: 12px;
 
-      & p {
-        font-weight: var(--fw-4);
-        font-family: (var(--primary-font));
-        font-size: var(--fs-4);
+        & h1 {
+          text-align: center;
+          margin-top: 8rem;
+          font-family: var(--ff-secondary);
+          margin-bottom: 4.2rem;
+          font-weight: var(--fw-1);
+          font-size: var(--fs-2);
 
-        color: var(--text-color-1);
+          color: var(--text-heading);
+        }
+
+        & form {
+          width: 52.8rem;
+          margin-inline: auto;
+
+          display: flex;
+          flex-flow: column;
+
+          gap: 4.8rem;
+          & fieldset.about {
+            & div.input-wrapper {
+              display: flex;
+              flex-flow: row;
+              gap: 1.6rem;
+              & p {
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+              }
+            }
+          }
+        }
       }
     }
   }
-
-
 }
